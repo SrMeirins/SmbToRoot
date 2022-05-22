@@ -8,3 +8,5 @@ commands.
 
 No authentication is needed to exploit this vulnerability since
 this option is used to map usernames prior to authentication!
+
+Only works with apt package management system.
